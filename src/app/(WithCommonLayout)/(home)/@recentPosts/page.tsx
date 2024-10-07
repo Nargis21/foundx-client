@@ -1,13 +1,17 @@
-import { Button } from '@nextui-org/button';
-import Link from 'next/link';
-import React from 'react';
-import Container from '../../ui/Container';
-import { getRecentPosts } from '@/src/services/RecentPosts';
-import { TPost } from '@/src/types';
-import Card from '../../ui/Card';
+import { Button } from "@nextui-org/button";
+import Link from "next/link";
+import React from "react";
+
+
+
+import { getRecentPosts } from "@/src/services/RecentPosts";
+import { TPost } from "@/src/types";
+import Container from "@/src/components/ui/Container";
+import Card from "@/src/components/ui/Card";
 
 const RecentPosts = async () => {
-    const { data: posts } = await getRecentPosts()
+    const { data: posts } = await getRecentPosts();
+
     return (
         <Container>
             <div className="section-title my-8">
